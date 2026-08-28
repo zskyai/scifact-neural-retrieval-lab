@@ -1,0 +1,22 @@
+{
+  "data_root": "data/scifact",
+  "corpus_file": "corpus.jsonl",
+  "mined_file": "results/scifact_train_bm25_negatives.jsonl",
+  "model_name_or_path": "sentence-transformers/all-MiniLM-L6-v2",
+  "output_dir": "checkpoints/scifact-minilm-infonce",
+  "pooling": "mean",
+  "normalize": true,
+  "batch_size": 8,
+  "num_negatives": 4,
+  "max_length": 256,
+  "epochs": 2,
+  "learning_rate": 0.00002,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "temperature": 0.05,
+  "in_batch_negatives": true,
+  "gradient_clip_norm": 1.0,
+  "logging_steps": 10,
+  "seed": 42,
+  "device": "auto"
+}

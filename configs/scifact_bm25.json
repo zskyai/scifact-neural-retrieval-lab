@@ -1,0 +1,12 @@
+{
+  "data_root": "data/scifact",
+  "corpus_file": "corpus.jsonl",
+  "claims_file": "claims_dev.jsonl",
+  "k1": 1.5,
+  "b": 0.75,
+  "title_boost": 2,
+  "top_k": 100,
+  "ks": [1, 5, 10, 20, 100],
+  "output_metrics": "results/bm25_scifact_dev.json",
+  "output_run": "results/bm25_scifact_dev.run.jsonl"
+}

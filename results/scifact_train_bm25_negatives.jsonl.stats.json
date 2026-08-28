@@ -1,0 +1,9 @@
+{
+  "input_queries": 809,
+  "written_queries": 809,
+  "skipped_unlabeled": 0,
+  "skipped_missing_positive": 0,
+  "removed_labeled_positives": 703,
+  "removed_teacher_ambiguous": 0,
+  "average_negatives": 8.0
+}

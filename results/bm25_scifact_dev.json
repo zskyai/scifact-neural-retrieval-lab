@@ -1,0 +1,45 @@
+{
+  "experiment": "bm25_scifact",
+  "status": "measured",
+  "corpus_path": "data/scifact/corpus.jsonl",
+  "claims_path": "data/scifact/claims_dev.jsonl",
+  "corpus_documents": 5183,
+  "queries": 300,
+  "bm25": {
+    "k1": 1.5,
+    "b": 0.75,
+    "title_boost": 2,
+    "tokenizer": "lowercase_alphanumeric_regex"
+  },
+  "timing_seconds": {
+    "index": 0.39235730000655167,
+    "search": 1.6037455000041518,
+    "search_per_query": 0.005345818333347172
+  },
+  "metrics": {
+    "evaluated_queries": 300,
+    "total_queries": 300,
+    "ks": [
+      1,
+      5,
+      10,
+      20,
+      100
+    ],
+    "recall@1": 0.5419444444444445,
+    "mrr@1": 0.56,
+    "ndcg@1": 0.56,
+    "recall@5": 0.727611111111111,
+    "mrr@5": 0.6336666666666666,
+    "ndcg@5": 0.6502891698584015,
+    "recall@10": 0.7874444444444445,
+    "mrr@10": 0.6416230158730157,
+    "ndcg@10": 0.6716409162304258,
+    "recall@20": 0.8292222222222222,
+    "mrr@20": 0.6444975530288997,
+    "ndcg@20": 0.682866032928836,
+    "recall@100": 0.8825555555555555,
+    "mrr@100": 0.6457592094004825,
+    "ndcg@100": 0.6939533875712326
+  }
+}

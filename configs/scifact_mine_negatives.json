@@ -1,0 +1,14 @@
+{
+  "data_root": "data/scifact",
+  "corpus_file": "corpus.jsonl",
+  "claims_file": "claims_train.jsonl",
+  "k1": 1.5,
+  "b": 0.75,
+  "title_boost": 2,
+  "top_pool": 100,
+  "rank_start": 1,
+  "num_negatives": 8,
+  "teacher_model": null,
+  "teacher_margin": 0.1,
+  "output": "results/scifact_train_bm25_negatives.jsonl"
+}

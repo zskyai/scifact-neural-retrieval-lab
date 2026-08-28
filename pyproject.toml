@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scifact-neural-retrieval-lab"
+version = "0.1.0"
+description = "Reproducible BM25, dense retrieval, hard-negative mining, and reranking experiments on SciFact."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Xukun Zhang" }
+]
+dependencies = [
+  "torch>=2.2",
+  "transformers>=4.46,<6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+scifact-retrieval = "retrieval_lab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["retrieval_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
