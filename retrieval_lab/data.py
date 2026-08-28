@@ -121,4 +121,3 @@ def write_jsonl(path: str | Path, rows: Iterable[Mapping]) -> None:
     with resolved.open("w", encoding="utf-8") as handle:
         for row in rows:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
-

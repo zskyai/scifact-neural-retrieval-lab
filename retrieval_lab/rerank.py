@@ -92,4 +92,3 @@ def rerank_run(
         rescored.sort(key=lambda result: (result.score, result.doc_id), reverse=True)
         reranked[query_id] = rescored + tail
     return reranked
-

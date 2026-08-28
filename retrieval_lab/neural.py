@@ -264,4 +264,3 @@ def dense_retrieve(
             for score, doc_index in zip(scores[row], indices[row])
         ]
     return run
-

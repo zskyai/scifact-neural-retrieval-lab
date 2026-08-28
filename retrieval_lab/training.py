@@ -252,4 +252,3 @@ def train_dual_encoder(
     }
     write_json(output / "training_summary.json", summary)
     return summary
-

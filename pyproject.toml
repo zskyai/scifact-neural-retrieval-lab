@@ -29,4 +29,3 @@ include = ["retrieval_lab*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
-
