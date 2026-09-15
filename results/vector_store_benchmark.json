@@ -1,0 +1,23 @@
+{
+  "encoder": "checkpoints\\scifact-minilm-hn",
+  "queries": 300,
+  "top_k": 10,
+  "stores": {
+    "qdrant": {
+      "recall_at_k": 0.814,
+      "p50_ms": 8.986600005300716,
+      "p95_ms": 12.73552000639029,
+      "p99_ms": 14.402901998837477,
+      "index_size_bytes": 21451308,
+      "index_size_note": null
+    },
+    "milvus": {
+      "recall_at_k": 0.814,
+      "p50_ms": 8.877449989086017,
+      "p95_ms": 12.157160011702217,
+      "p99_ms": 15.820372982998352,
+      "index_size_bytes": 39992730,
+      "index_size_note": "Milvus Docker volume total (38.14 MiB), including collection metadata"
+    }
+  }
+}

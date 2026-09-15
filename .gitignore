@@ -8,4 +8,9 @@ build/
 checkpoints/
 data/
 results/*.run.jsonl
+results/**/*.run.jsonl
+results/**/*.jsonl
+results/**/collection/
+results/**/checkpoints/
 results/*_negatives.jsonl
+results/qdrant_local/

@@ -1,0 +1,3239 @@
+{
+  "metrics": {
+    "queries": 20,
+    "queries_with_gold_evidence": 13,
+    "evidence_precision": 0.35294117647058826,
+    "evidence_recall": 0.2727272727272727,
+    "evidence_f1": 0.30769230769230765,
+    "citation_validity": 1.0,
+    "citation_support_rate": 1.0,
+    "nli_label_counts": {
+      "ENTAILMENT": 24,
+      "CONTRADICTION": 438,
+      "NEUTRAL": 1268
+    },
+    "entailment_threshold": 0.5,
+    "retrieval_depth": 10,
+    "latency_seconds": 165.3404537999886,
+    "nli_model_path": "..\\..\\models\\cross-encoder__nli-deberta-v3-base",
+    "gold_evidence_used_for_input": false,
+    "test_used": false
+  },
+  "queries": [
+    {
+      "query_id": "1",
+      "gold_evidence": [],
+      "retrieved_doc_ids": [
+        "43385013",
+        "10608397",
+        "40212412",
+        "10931595",
+        "393001",
+        "27049238",
+        "803312",
+        "10906636",
+        "42240424",
+        "10086360"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "43385013",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.99750816822052
+        },
+        {
+          "doc_id": "43385013",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9965885877609253
+        },
+        {
+          "doc_id": "43385013",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9775691628456116
+        },
+        {
+          "doc_id": "43385013",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9974919557571411
+        },
+        {
+          "doc_id": "43385013",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9997133612632751
+        },
+        {
+          "doc_id": "43385013",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9983848333358765
+        },
+        {
+          "doc_id": "43385013",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9966057538986206
+        },
+        {
+          "doc_id": "43385013",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9995664954185486
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9991388320922852
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9986310601234436
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9979891777038574
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9994834661483765
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9656482934951782
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9981184005737305
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.7091944813728333
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9983733892440796
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9997249245643616
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9811000823974609
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9922375082969666
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 11,
+          "label": "CONTRADICTION",
+          "score": 0.9984995126724243
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 12,
+          "label": "CONTRADICTION",
+          "score": 0.9879781007766724
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 13,
+          "label": "CONTRADICTION",
+          "score": 0.974275529384613
+        },
+        {
+          "doc_id": "10608397",
+          "sentence_id": 14,
+          "label": "CONTRADICTION",
+          "score": 0.6058012247085571
+        },
+        {
+          "doc_id": "40212412",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9651967287063599
+        },
+        {
+          "doc_id": "40212412",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9997624754905701
+        },
+        {
+          "doc_id": "40212412",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9998639822006226
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9995893836021423
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9994224309921265
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9951655864715576
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9975143671035767
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9980841875076294
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9936138987541199
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9961101412773132
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9998281002044678
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9976962208747864
+        },
+        {
+          "doc_id": "10931595",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9953972697257996
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9998694658279419
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9998100399971008
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9997690320014954
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9967478513717651
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.8514466285705566
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9990952014923096
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9968463778495789
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9848666787147522
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9736517071723938
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.853508710861206
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9879155158996582
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 11,
+          "label": "CONTRADICTION",
+          "score": 0.9914815425872803
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 12,
+          "label": "CONTRADICTION",
+          "score": 0.999885082244873
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 13,
+          "label": "CONTRADICTION",
+          "score": 0.9986880421638489
+        },
+        {
+          "doc_id": "393001",
+          "sentence_id": 14,
+          "label": "CONTRADICTION",
+          "score": 0.9996280670166016
+        },
+        {
+          "doc_id": "27049238",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9993088245391846
+        },
+        {
+          "doc_id": "27049238",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9995589852333069
+        },
+        {
+          "doc_id": "27049238",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.999569833278656
+        },
+        {
+          "doc_id": "27049238",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9995297193527222
+        },
+        {
+          "doc_id": "27049238",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9987614154815674
+        },
+        {
+          "doc_id": "27049238",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9997850060462952
+        },
+        {
+          "doc_id": "803312",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.993131697177887
+        },
+        {
+          "doc_id": "803312",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9971408843994141
+        },
+        {
+          "doc_id": "803312",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9996516704559326
+        },
+        {
+          "doc_id": "803312",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9991183876991272
+        },
+        {
+          "doc_id": "803312",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.961050808429718
+        },
+        {
+          "doc_id": "803312",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9976152181625366
+        },
+        {
+          "doc_id": "803312",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9991371035575867
+        },
+        {
+          "doc_id": "10906636",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9953088164329529
+        },
+        {
+          "doc_id": "10906636",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9995372295379639
+        },
+        {
+          "doc_id": "10906636",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.99935382604599
+        },
+        {
+          "doc_id": "10906636",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.999550998210907
+        },
+        {
+          "doc_id": "10906636",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9996739625930786
+        },
+        {
+          "doc_id": "10906636",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9738161563873291
+        },
+        {
+          "doc_id": "10906636",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9987441301345825
+        },
+        {
+          "doc_id": "10906636",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.998668909072876
+        },
+        {
+          "doc_id": "42240424",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.967467725276947
+        },
+        {
+          "doc_id": "42240424",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9993689656257629
+        },
+        {
+          "doc_id": "42240424",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9997325539588928
+        },
+        {
+          "doc_id": "42240424",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9981024861335754
+        },
+        {
+          "doc_id": "42240424",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9987745881080627
+        },
+        {
+          "doc_id": "42240424",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9991971850395203
+        },
+        {
+          "doc_id": "10086360",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9995654225349426
+        },
+        {
+          "doc_id": "10086360",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9995038509368896
+        },
+        {
+          "doc_id": "10086360",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9990309476852417
+        },
+        {
+          "doc_id": "10086360",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9996778964996338
+        },
+        {
+          "doc_id": "10086360",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9989114999771118
+        },
+        {
+          "doc_id": "10086360",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9994890689849854
+        },
+        {
+          "doc_id": "10086360",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9976450800895691
+        }
+      ]
+    },
+    {
+      "query_id": "3",
+      "gold_evidence": [
+        {
+          "doc_id": "14717500",
+          "sentence_id": 2
+        },
+        {
+          "doc_id": "14717500",
+          "sentence_id": 5
+        },
+        {
+          "doc_id": "14717500",
+          "sentence_id": 7
+        }
+      ],
+      "retrieved_doc_ids": [
+        "14717500",
+        "2739854",
+        "23389795",
+        "3672261",
+        "4632921",
+        "13519661",
+        "4414547",
+        "25571386",
+        "19497526",
+        "14019636"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "14717500",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9960407018661499
+        },
+        {
+          "doc_id": "19497526",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.5791071653366089
+        }
+      ]
+    },
+    {
+      "query_id": "5",
+      "gold_evidence": [
+        {
+          "doc_id": "13734012",
+          "sentence_id": 4
+        }
+      ],
+      "retrieved_doc_ids": [
+        "13734012",
+        "18617259",
+        "17333231",
+        "42240424",
+        "695938",
+        "1292369",
+        "103007",
+        "16737163",
+        "11880289",
+        "52180874"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "13734012",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9793309569358826
+        },
+        {
+          "doc_id": "13734012",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.8466204404830933
+        },
+        {
+          "doc_id": "17333231",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.6252292990684509
+        },
+        {
+          "doc_id": "1292369",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.8172610998153687
+        },
+        {
+          "doc_id": "103007",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9498425722122192
+        },
+        {
+          "doc_id": "103007",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9893804788589478
+        },
+        {
+          "doc_id": "103007",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9766858220100403
+        },
+        {
+          "doc_id": "16737163",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.916023313999176
+        },
+        {
+          "doc_id": "16737163",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9971356391906738
+        },
+        {
+          "doc_id": "16737163",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9800347089767456
+        },
+        {
+          "doc_id": "16737163",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9948158860206604
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.881659209728241
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9829537868499756
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9850715398788452
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.8470472693443298
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.8141972422599792
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9665342569351196
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 11,
+          "label": "CONTRADICTION",
+          "score": 0.9529609084129333
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 12,
+          "label": "CONTRADICTION",
+          "score": 0.8421786427497864
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 14,
+          "label": "CONTRADICTION",
+          "score": 0.9584531188011169
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 17,
+          "label": "CONTRADICTION",
+          "score": 0.9432436227798462
+        },
+        {
+          "doc_id": "11880289",
+          "sentence_id": 18,
+          "label": "CONTRADICTION",
+          "score": 0.8432922959327698
+        },
+        {
+          "doc_id": "52180874",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9938218593597412
+        }
+      ]
+    },
+    {
+      "query_id": "13",
+      "gold_evidence": [],
+      "retrieved_doc_ids": [
+        "1263446",
+        "7662395",
+        "17450673",
+        "5487448",
+        "8842332",
+        "19799455",
+        "12779444",
+        "25182647",
+        "22815457",
+        "12770738"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "17450673",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9973859190940857
+        }
+      ]
+    },
+    {
+      "query_id": "36",
+      "gold_evidence": [],
+      "retrieved_doc_ids": [
+        "42441846",
+        "33409100",
+        "18557974",
+        "16252863",
+        "37424881",
+        "19799455",
+        "11705328",
+        "21636085",
+        "23267371",
+        "18256197"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "11705328",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9956198334693909
+        },
+        {
+          "doc_id": "23267371",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.5484365224838257
+        }
+      ]
+    },
+    {
+      "query_id": "42",
+      "gold_evidence": [
+        {
+          "doc_id": "18174210",
+          "sentence_id": 1
+        },
+        {
+          "doc_id": "18174210",
+          "sentence_id": 9
+        },
+        {
+          "doc_id": "18174210",
+          "sentence_id": 10
+        }
+      ],
+      "retrieved_doc_ids": [
+        "18174210",
+        "40913091",
+        "45218443",
+        "6315132",
+        "4449524",
+        "4353857",
+        "27162821",
+        "10128893",
+        "35766603",
+        "16056514"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "18174210",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9994076490402222
+        },
+        {
+          "doc_id": "18174210",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9439717531204224
+        },
+        {
+          "doc_id": "18174210",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9989381432533264
+        },
+        {
+          "doc_id": "18174210",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9997335076332092
+        },
+        {
+          "doc_id": "18174210",
+          "sentence_id": 12,
+          "label": "CONTRADICTION",
+          "score": 0.9995284080505371
+        },
+        {
+          "doc_id": "18174210",
+          "sentence_id": 13,
+          "label": "CONTRADICTION",
+          "score": 0.9994527697563171
+        },
+        {
+          "doc_id": "45218443",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9992693066596985
+        },
+        {
+          "doc_id": "45218443",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9967124462127686
+        },
+        {
+          "doc_id": "4353857",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9996950626373291
+        },
+        {
+          "doc_id": "4353857",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.7495095729827881
+        },
+        {
+          "doc_id": "4353857",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9827395677566528
+        },
+        {
+          "doc_id": "4353857",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9823565483093262
+        },
+        {
+          "doc_id": "10128893",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.8180710077285767
+        },
+        {
+          "doc_id": "35766603",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9992031455039978
+        },
+        {
+          "doc_id": "35766603",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9949893355369568
+        },
+        {
+          "doc_id": "35766603",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.8643274903297424
+        },
+        {
+          "doc_id": "35766603",
+          "sentence_id": 15,
+          "label": "CONTRADICTION",
+          "score": 0.9991976618766785
+        },
+        {
+          "doc_id": "16056514",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9990523457527161
+        },
+        {
+          "doc_id": "16056514",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9980072379112244
+        },
+        {
+          "doc_id": "16056514",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.7746864557266235
+        },
+        {
+          "doc_id": "16056514",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9926096796989441
+        }
+      ]
+    },
+    {
+      "query_id": "48",
+      "gold_evidence": [
+        {
+          "doc_id": "13734012",
+          "sentence_id": 4
+        }
+      ],
+      "retrieved_doc_ids": [
+        "18617259",
+        "13734012",
+        "13959707",
+        "18340282",
+        "26016929",
+        "15648443",
+        "18344910",
+        "32850528",
+        "31229233",
+        "11349166"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "13959707",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.5259277820587158
+        },
+        {
+          "doc_id": "18340282",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9952803254127502
+        },
+        {
+          "doc_id": "26016929",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.984606146812439
+        },
+        {
+          "doc_id": "15648443",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9987207055091858
+        },
+        {
+          "doc_id": "18344910",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9978105425834656
+        },
+        {
+          "doc_id": "18344910",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9626811146736145
+        },
+        {
+          "doc_id": "32850528",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9325950741767883
+        },
+        {
+          "doc_id": "32850528",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9966447353363037
+        },
+        {
+          "doc_id": "32850528",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9959852695465088
+        },
+        {
+          "doc_id": "11349166",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9926992058753967
+        },
+        {
+          "doc_id": "11349166",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.822363555431366
+        },
+        {
+          "doc_id": "11349166",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9983901977539062
+        },
+        {
+          "doc_id": "11349166",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.5105519890785217
+        }
+      ]
+    },
+    {
+      "query_id": "49",
+      "gold_evidence": [
+        {
+          "doc_id": "5953485",
+          "sentence_id": 1
+        },
+        {
+          "doc_id": "5953485",
+          "sentence_id": 2
+        }
+      ],
+      "retrieved_doc_ids": [
+        "5953485",
+        "5702790",
+        "7029990",
+        "15590539",
+        "6913227",
+        "1333643",
+        "946756",
+        "18654430",
+        "86602746",
+        "23913146"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "86602746",
+          "sentence_id": 12,
+          "label": "ENTAILMENT",
+          "score": 0.9413596391677856
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "5702790",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9967827796936035
+        },
+        {
+          "doc_id": "5702790",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9984334111213684
+        },
+        {
+          "doc_id": "5702790",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9973725080490112
+        },
+        {
+          "doc_id": "5702790",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9973822236061096
+        },
+        {
+          "doc_id": "5702790",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9963679313659668
+        },
+        {
+          "doc_id": "15590539",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9996738433837891
+        },
+        {
+          "doc_id": "15590539",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9513734579086304
+        },
+        {
+          "doc_id": "15590539",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9506601691246033
+        },
+        {
+          "doc_id": "1333643",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9856299757957458
+        },
+        {
+          "doc_id": "946756",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.999656081199646
+        },
+        {
+          "doc_id": "946756",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9985014200210571
+        },
+        {
+          "doc_id": "946756",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.6983906626701355
+        },
+        {
+          "doc_id": "946756",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9969072937965393
+        },
+        {
+          "doc_id": "946756",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9959476590156555
+        },
+        {
+          "doc_id": "946756",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.7872185707092285
+        },
+        {
+          "doc_id": "18654430",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.7442951798439026
+        },
+        {
+          "doc_id": "18654430",
+          "sentence_id": 14,
+          "label": "CONTRADICTION",
+          "score": 0.9992843270301819
+        },
+        {
+          "doc_id": "23913146",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.5020396709442139
+        },
+        {
+          "doc_id": "23913146",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9990919828414917
+        },
+        {
+          "doc_id": "23913146",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.98795086145401
+        },
+        {
+          "doc_id": "23913146",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.962341845035553
+        },
+        {
+          "doc_id": "23913146",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9872484803199768
+        }
+      ]
+    },
+    {
+      "query_id": "50",
+      "gold_evidence": [
+        {
+          "doc_id": "12580014",
+          "sentence_id": 1
+        }
+      ],
+      "retrieved_doc_ids": [
+        "12580014",
+        "18488986",
+        "39559521",
+        "42279414",
+        "25738896",
+        "4561402",
+        "8354687",
+        "43014661",
+        "3952288",
+        "19736671"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "25738896",
+          "sentence_id": 6,
+          "label": "ENTAILMENT",
+          "score": 0.9852856993675232
+        },
+        {
+          "doc_id": "12580014",
+          "sentence_id": 1,
+          "label": "ENTAILMENT",
+          "score": 0.9819431900978088
+        },
+        {
+          "doc_id": "25738896",
+          "sentence_id": 5,
+          "label": "ENTAILMENT",
+          "score": 0.9803333878517151
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "39559521",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9957025647163391
+        },
+        {
+          "doc_id": "3952288",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.7820478677749634
+        }
+      ]
+    },
+    {
+      "query_id": "51",
+      "gold_evidence": [
+        {
+          "doc_id": "45638119",
+          "sentence_id": 4
+        }
+      ],
+      "retrieved_doc_ids": [
+        "45638119",
+        "8963413",
+        "24341590",
+        "23830488",
+        "21439640",
+        "13906581",
+        "13069283",
+        "2140497",
+        "27240667",
+        "3285322"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "8963413",
+          "sentence_id": 2,
+          "label": "ENTAILMENT",
+          "score": 0.9823494553565979
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "45638119",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9999129772186279
+        },
+        {
+          "doc_id": "24341590",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9564804434776306
+        },
+        {
+          "doc_id": "23830488",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.6319143772125244
+        },
+        {
+          "doc_id": "23830488",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9829989075660706
+        },
+        {
+          "doc_id": "13906581",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9676791429519653
+        },
+        {
+          "doc_id": "13069283",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9423734545707703
+        },
+        {
+          "doc_id": "3285322",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.8810291290283203
+        }
+      ]
+    },
+    {
+      "query_id": "53",
+      "gold_evidence": [
+        {
+          "doc_id": "45638119",
+          "sentence_id": 4
+        }
+      ],
+      "retrieved_doc_ids": [
+        "45638119",
+        "10024681",
+        "25973484",
+        "7821634",
+        "21439640",
+        "15113221",
+        "5372432",
+        "29366489",
+        "12358173",
+        "2140497"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "45638119",
+          "sentence_id": 4,
+          "label": "ENTAILMENT",
+          "score": 0.9979653358459473
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "10024681",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.8738418221473694
+        },
+        {
+          "doc_id": "10024681",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9968923926353455
+        },
+        {
+          "doc_id": "25973484",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.973638653755188
+        },
+        {
+          "doc_id": "21439640",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.803693413734436
+        },
+        {
+          "doc_id": "15113221",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.8927921652793884
+        },
+        {
+          "doc_id": "12358173",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9650626182556152
+        }
+      ]
+    },
+    {
+      "query_id": "54",
+      "gold_evidence": [
+        {
+          "doc_id": "49556906",
+          "sentence_id": 5
+        },
+        {
+          "doc_id": "49556906",
+          "sentence_id": 6
+        },
+        {
+          "doc_id": "49556906",
+          "sentence_id": 7
+        }
+      ],
+      "retrieved_doc_ids": [
+        "3973445",
+        "9899292",
+        "32408470",
+        "24721866",
+        "9752604",
+        "1590744",
+        "3419709",
+        "22036571",
+        "7005276",
+        "38533515"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "3973445",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9998107552528381
+        },
+        {
+          "doc_id": "3973445",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9996033310890198
+        },
+        {
+          "doc_id": "3973445",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.6072785258293152
+        },
+        {
+          "doc_id": "3973445",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9997362494468689
+        },
+        {
+          "doc_id": "3973445",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.8983356356620789
+        },
+        {
+          "doc_id": "9899292",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9996392726898193
+        },
+        {
+          "doc_id": "9899292",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.999927282333374
+        },
+        {
+          "doc_id": "9899292",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9998238682746887
+        },
+        {
+          "doc_id": "9899292",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9978140592575073
+        },
+        {
+          "doc_id": "9899292",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9996974468231201
+        },
+        {
+          "doc_id": "9899292",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9993475079536438
+        },
+        {
+          "doc_id": "9899292",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9998670816421509
+        },
+        {
+          "doc_id": "9899292",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9999467134475708
+        },
+        {
+          "doc_id": "32408470",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.6783086657524109
+        },
+        {
+          "doc_id": "32408470",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.997596800327301
+        },
+        {
+          "doc_id": "32408470",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9249541163444519
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.8736376762390137
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9717953205108643
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9998588562011719
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9803084135055542
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9037666320800781
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9971150159835815
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9714879393577576
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 11,
+          "label": "CONTRADICTION",
+          "score": 0.9996127486228943
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 12,
+          "label": "CONTRADICTION",
+          "score": 0.8335651755332947
+        },
+        {
+          "doc_id": "9752604",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9991629123687744
+        },
+        {
+          "doc_id": "9752604",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.999737560749054
+        },
+        {
+          "doc_id": "1590744",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9983735084533691
+        },
+        {
+          "doc_id": "1590744",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9997367262840271
+        },
+        {
+          "doc_id": "1590744",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9998339414596558
+        },
+        {
+          "doc_id": "3419709",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.994933545589447
+        },
+        {
+          "doc_id": "3419709",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9994208812713623
+        },
+        {
+          "doc_id": "3419709",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9984208345413208
+        },
+        {
+          "doc_id": "3419709",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9987838864326477
+        },
+        {
+          "doc_id": "3419709",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9999207258224487
+        },
+        {
+          "doc_id": "3419709",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9999263286590576
+        },
+        {
+          "doc_id": "22036571",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9984044432640076
+        },
+        {
+          "doc_id": "22036571",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9822417497634888
+        },
+        {
+          "doc_id": "7005276",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9998998641967773
+        },
+        {
+          "doc_id": "7005276",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9994377493858337
+        },
+        {
+          "doc_id": "7005276",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9998984336853027
+        },
+        {
+          "doc_id": "7005276",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.999809205532074
+        },
+        {
+          "doc_id": "7005276",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9966565370559692
+        },
+        {
+          "doc_id": "7005276",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9927545189857483
+        },
+        {
+          "doc_id": "7005276",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9997007846832275
+        },
+        {
+          "doc_id": "7005276",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9995219707489014
+        },
+        {
+          "doc_id": "38533515",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9996474981307983
+        },
+        {
+          "doc_id": "38533515",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9993273019790649
+        }
+      ]
+    },
+    {
+      "query_id": "56",
+      "gold_evidence": [
+        {
+          "doc_id": "4709641",
+          "sentence_id": 1
+        }
+      ],
+      "retrieved_doc_ids": [
+        "4709641",
+        "11659421",
+        "22185730",
+        "13969173",
+        "35520219",
+        "33911859",
+        "4459491",
+        "26336593",
+        "4423401",
+        "33986200"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "4709641",
+          "sentence_id": 1,
+          "label": "ENTAILMENT",
+          "score": 0.9209582209587097
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "11659421",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9561785459518433
+        },
+        {
+          "doc_id": "11659421",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9933920502662659
+        },
+        {
+          "doc_id": "22185730",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.8637067079544067
+        },
+        {
+          "doc_id": "22185730",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9937061667442322
+        },
+        {
+          "doc_id": "22185730",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.997844934463501
+        },
+        {
+          "doc_id": "22185730",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9994257688522339
+        },
+        {
+          "doc_id": "22185730",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9332759380340576
+        },
+        {
+          "doc_id": "22185730",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.991696834564209
+        },
+        {
+          "doc_id": "13969173",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9816135168075562
+        },
+        {
+          "doc_id": "13969173",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9986470341682434
+        },
+        {
+          "doc_id": "35520219",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9992161989212036
+        },
+        {
+          "doc_id": "35520219",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9819559454917908
+        },
+        {
+          "doc_id": "35520219",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.6905848383903503
+        },
+        {
+          "doc_id": "35520219",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9990047812461853
+        },
+        {
+          "doc_id": "35520219",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9914160370826721
+        },
+        {
+          "doc_id": "35520219",
+          "sentence_id": 11,
+          "label": "CONTRADICTION",
+          "score": 0.9979404807090759
+        },
+        {
+          "doc_id": "35520219",
+          "sentence_id": 14,
+          "label": "CONTRADICTION",
+          "score": 0.9994152784347534
+        },
+        {
+          "doc_id": "33911859",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.5445011258125305
+        },
+        {
+          "doc_id": "4459491",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9901337027549744
+        },
+        {
+          "doc_id": "4459491",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9997056126594543
+        },
+        {
+          "doc_id": "4459491",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9830060601234436
+        },
+        {
+          "doc_id": "4459491",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9995135068893433
+        },
+        {
+          "doc_id": "26336593",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9992415904998779
+        },
+        {
+          "doc_id": "26336593",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.5713449716567993
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9998458623886108
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9969519376754761
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9993116855621338
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9990991353988647
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9990442395210266
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9853869676589966
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9996984004974365
+        },
+        {
+          "doc_id": "33986200",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.8813905119895935
+        },
+        {
+          "doc_id": "33986200",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.7341933250427246
+        }
+      ]
+    },
+    {
+      "query_id": "57",
+      "gold_evidence": [
+        {
+          "doc_id": "4709641",
+          "sentence_id": 1
+        }
+      ],
+      "retrieved_doc_ids": [
+        "4709641",
+        "11659421",
+        "22185730",
+        "13969173",
+        "35520219",
+        "33911859",
+        "4459491",
+        "26336593",
+        "4423401",
+        "33986200"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "4709641",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9993008375167847
+        },
+        {
+          "doc_id": "22185730",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.6871398091316223
+        },
+        {
+          "doc_id": "22185730",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.657740592956543
+        },
+        {
+          "doc_id": "35520219",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9527065753936768
+        },
+        {
+          "doc_id": "4459491",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9986249208450317
+        },
+        {
+          "doc_id": "4459491",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9916558265686035
+        },
+        {
+          "doc_id": "4459491",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.8486211895942688
+        },
+        {
+          "doc_id": "26336593",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9886881709098816
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9990487694740295
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9861043095588684
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.511256217956543
+        },
+        {
+          "doc_id": "4423401",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9935785531997681
+        }
+      ]
+    },
+    {
+      "query_id": "70",
+      "gold_evidence": [
+        {
+          "doc_id": "4414547",
+          "sentence_id": 5
+        },
+        {
+          "doc_id": "5956380",
+          "sentence_id": 5
+        },
+        {
+          "doc_id": "5956380",
+          "sentence_id": 6
+        }
+      ],
+      "retrieved_doc_ids": [
+        "5956380",
+        "4414547",
+        "24721866",
+        "5254463",
+        "7465900",
+        "21307488",
+        "7225911",
+        "23985464",
+        "43880096",
+        "11903247"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "4414547",
+          "sentence_id": 5,
+          "label": "ENTAILMENT",
+          "score": 0.9813505411148071
+        },
+        {
+          "doc_id": "4414547",
+          "sentence_id": 1,
+          "label": "ENTAILMENT",
+          "score": 0.962235689163208
+        },
+        {
+          "doc_id": "5956380",
+          "sentence_id": 5,
+          "label": "ENTAILMENT",
+          "score": 0.8870302438735962
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "5956380",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9990947246551514
+        },
+        {
+          "doc_id": "4414547",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9382321834564209
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9992052912712097
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.996737539768219
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9927190542221069
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9812434315681458
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.5405183434486389
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 11,
+          "label": "CONTRADICTION",
+          "score": 0.9936091899871826
+        },
+        {
+          "doc_id": "24721866",
+          "sentence_id": 12,
+          "label": "CONTRADICTION",
+          "score": 0.970796525478363
+        },
+        {
+          "doc_id": "5254463",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9613586664199829
+        },
+        {
+          "doc_id": "7465900",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9899985194206238
+        },
+        {
+          "doc_id": "7465900",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9772993326187134
+        },
+        {
+          "doc_id": "7465900",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9091131687164307
+        },
+        {
+          "doc_id": "7225911",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9627467393875122
+        },
+        {
+          "doc_id": "23985464",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9981789588928223
+        },
+        {
+          "doc_id": "23985464",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9936145544052124
+        },
+        {
+          "doc_id": "23985464",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9974408149719238
+        },
+        {
+          "doc_id": "43880096",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.8184555768966675
+        },
+        {
+          "doc_id": "43880096",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.997973620891571
+        },
+        {
+          "doc_id": "43880096",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.998740017414093
+        },
+        {
+          "doc_id": "43880096",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9851440787315369
+        },
+        {
+          "doc_id": "11903247",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.997661828994751
+        }
+      ]
+    },
+    {
+      "query_id": "72",
+      "gold_evidence": [],
+      "retrieved_doc_ids": [
+        "18895793",
+        "9929089",
+        "16705338",
+        "11420613",
+        "2533768",
+        "22711954",
+        "1744752",
+        "21561474",
+        "27393799",
+        "4587978"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "16705338",
+          "sentence_id": 1,
+          "label": "ENTAILMENT",
+          "score": 0.9850168228149414
+        },
+        {
+          "doc_id": "22711954",
+          "sentence_id": 7,
+          "label": "ENTAILMENT",
+          "score": 0.8390955924987793
+        },
+        {
+          "doc_id": "22711954",
+          "sentence_id": 8,
+          "label": "ENTAILMENT",
+          "score": 0.7003956437110901
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "18895793",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9120966792106628
+        },
+        {
+          "doc_id": "18895793",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9020697474479675
+        },
+        {
+          "doc_id": "18895793",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.7983746528625488
+        },
+        {
+          "doc_id": "18895793",
+          "sentence_id": 16,
+          "label": "CONTRADICTION",
+          "score": 0.8918556571006775
+        },
+        {
+          "doc_id": "9929089",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.8507802486419678
+        },
+        {
+          "doc_id": "9929089",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9658121466636658
+        },
+        {
+          "doc_id": "9929089",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.965866208076477
+        },
+        {
+          "doc_id": "9929089",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.8541789650917053
+        },
+        {
+          "doc_id": "9929089",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9542340040206909
+        },
+        {
+          "doc_id": "16705338",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9800721406936646
+        },
+        {
+          "doc_id": "16705338",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.997672975063324
+        },
+        {
+          "doc_id": "11420613",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.8352229595184326
+        },
+        {
+          "doc_id": "11420613",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9958337545394897
+        },
+        {
+          "doc_id": "11420613",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9930899739265442
+        },
+        {
+          "doc_id": "11420613",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.7086203098297119
+        },
+        {
+          "doc_id": "11420613",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9806352853775024
+        },
+        {
+          "doc_id": "11420613",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.965522050857544
+        },
+        {
+          "doc_id": "22711954",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.993768572807312
+        },
+        {
+          "doc_id": "22711954",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9986227750778198
+        },
+        {
+          "doc_id": "1744752",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9268178343772888
+        },
+        {
+          "doc_id": "1744752",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.88877934217453
+        },
+        {
+          "doc_id": "21561474",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9605738520622253
+        },
+        {
+          "doc_id": "27393799",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9534071087837219
+        },
+        {
+          "doc_id": "27393799",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.7492116093635559
+        },
+        {
+          "doc_id": "27393799",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.6898165345191956
+        },
+        {
+          "doc_id": "4587978",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.8227470517158508
+        },
+        {
+          "doc_id": "4587978",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.5099771022796631
+        }
+      ]
+    },
+    {
+      "query_id": "75",
+      "gold_evidence": [],
+      "retrieved_doc_ids": [
+        "4387784",
+        "13965483",
+        "2837758",
+        "25657127",
+        "26488879",
+        "8654183",
+        "2052720",
+        "22703082",
+        "24705390",
+        "29367554"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "26488879",
+          "sentence_id": 7,
+          "label": "ENTAILMENT",
+          "score": 0.9221627116203308
+        },
+        {
+          "doc_id": "2052720",
+          "sentence_id": 3,
+          "label": "ENTAILMENT",
+          "score": 0.59742271900177
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "4387784",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9837740659713745
+        },
+        {
+          "doc_id": "25657127",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9926462173461914
+        },
+        {
+          "doc_id": "25657127",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9975970387458801
+        },
+        {
+          "doc_id": "25657127",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.8823121190071106
+        },
+        {
+          "doc_id": "8654183",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9970794916152954
+        }
+      ]
+    },
+    {
+      "query_id": "94",
+      "gold_evidence": [],
+      "retrieved_doc_ids": [
+        "1215116",
+        "17327939",
+        "46926352",
+        "3896759",
+        "13070316",
+        "46765242",
+        "7662206",
+        "22613657",
+        "11481946",
+        "27567994"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "1215116",
+          "sentence_id": 6,
+          "label": "ENTAILMENT",
+          "score": 0.9088640809059143
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "17327939",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9999070167541504
+        },
+        {
+          "doc_id": "17327939",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9969642758369446
+        },
+        {
+          "doc_id": "17327939",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9996154308319092
+        },
+        {
+          "doc_id": "17327939",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.999935507774353
+        },
+        {
+          "doc_id": "46926352",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.7943199276924133
+        },
+        {
+          "doc_id": "3896759",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9890992641448975
+        },
+        {
+          "doc_id": "3896759",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9997350573539734
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9998470544815063
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9998645782470703
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9998272061347961
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9994363188743591
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9998494386672974
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9999250173568726
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9988157749176025
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9998314380645752
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9998735189437866
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9219666719436646
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.6851968765258789
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 11,
+          "label": "CONTRADICTION",
+          "score": 0.9970132112503052
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 12,
+          "label": "CONTRADICTION",
+          "score": 0.9999505281448364
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 13,
+          "label": "CONTRADICTION",
+          "score": 0.8506253957748413
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 14,
+          "label": "CONTRADICTION",
+          "score": 0.9612393379211426
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 15,
+          "label": "CONTRADICTION",
+          "score": 0.9999394416809082
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 16,
+          "label": "CONTRADICTION",
+          "score": 0.9999512434005737
+        },
+        {
+          "doc_id": "13070316",
+          "sentence_id": 17,
+          "label": "CONTRADICTION",
+          "score": 0.9997133612632751
+        },
+        {
+          "doc_id": "46765242",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9999556541442871
+        },
+        {
+          "doc_id": "46765242",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9999215602874756
+        },
+        {
+          "doc_id": "46765242",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9999107122421265
+        },
+        {
+          "doc_id": "46765242",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9992135763168335
+        },
+        {
+          "doc_id": "46765242",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9996404647827148
+        },
+        {
+          "doc_id": "7662206",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9999151229858398
+        },
+        {
+          "doc_id": "7662206",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9956294298171997
+        },
+        {
+          "doc_id": "7662206",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9998449087142944
+        },
+        {
+          "doc_id": "7662206",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9999605417251587
+        },
+        {
+          "doc_id": "22613657",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9998975992202759
+        },
+        {
+          "doc_id": "11481946",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9990668892860413
+        },
+        {
+          "doc_id": "11481946",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.999971866607666
+        },
+        {
+          "doc_id": "27567994",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9999347925186157
+        },
+        {
+          "doc_id": "27567994",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9998563528060913
+        },
+        {
+          "doc_id": "27567994",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9745392799377441
+        },
+        {
+          "doc_id": "27567994",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.999946117401123
+        },
+        {
+          "doc_id": "27567994",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9997959733009338
+        }
+      ]
+    },
+    {
+      "query_id": "99",
+      "gold_evidence": [],
+      "retrieved_doc_ids": [
+        "18810195",
+        "12225214",
+        "35768199",
+        "36855703",
+        "21754541",
+        "39389082",
+        "5953485",
+        "25942757",
+        "6788835",
+        "30208015"
+      ],
+      "predicted_evidence": [],
+      "predicted_contradictions": [
+        {
+          "doc_id": "36855703",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.5323571562767029
+        },
+        {
+          "doc_id": "36855703",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9980953335762024
+        }
+      ]
+    },
+    {
+      "query_id": "100",
+      "gold_evidence": [
+        {
+          "doc_id": "4381486",
+          "sentence_id": 5
+        }
+      ],
+      "retrieved_doc_ids": [
+        "4381486",
+        "25516011",
+        "4398832",
+        "92499",
+        "34982259",
+        "22973574",
+        "2547636",
+        "15728433",
+        "22186938",
+        "2701077"
+      ],
+      "predicted_evidence": [
+        {
+          "doc_id": "4381486",
+          "sentence_id": 5,
+          "label": "ENTAILMENT",
+          "score": 0.9980485439300537
+        }
+      ],
+      "predicted_contradictions": [
+        {
+          "doc_id": "4381486",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9985646605491638
+        },
+        {
+          "doc_id": "4381486",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9990391731262207
+        },
+        {
+          "doc_id": "4381486",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9998372793197632
+        },
+        {
+          "doc_id": "4381486",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9928168058395386
+        },
+        {
+          "doc_id": "4381486",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.8350937962532043
+        },
+        {
+          "doc_id": "4381486",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9943337440490723
+        },
+        {
+          "doc_id": "25516011",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9998074173927307
+        },
+        {
+          "doc_id": "25516011",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.7859596014022827
+        },
+        {
+          "doc_id": "25516011",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9873713254928589
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9996734857559204
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9998148083686829
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9997722506523132
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9996693134307861
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9998030066490173
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9999021291732788
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9996919631958008
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9998281002044678
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9802070260047913
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9991814494132996
+        },
+        {
+          "doc_id": "4398832",
+          "sentence_id": 10,
+          "label": "CONTRADICTION",
+          "score": 0.9990079998970032
+        },
+        {
+          "doc_id": "92499",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9980890154838562
+        },
+        {
+          "doc_id": "92499",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9997661709785461
+        },
+        {
+          "doc_id": "92499",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9944285154342651
+        },
+        {
+          "doc_id": "92499",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9992146492004395
+        },
+        {
+          "doc_id": "92499",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9999058246612549
+        },
+        {
+          "doc_id": "34982259",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9963106513023376
+        },
+        {
+          "doc_id": "34982259",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9989451766014099
+        },
+        {
+          "doc_id": "34982259",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.995144248008728
+        },
+        {
+          "doc_id": "34982259",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9994082450866699
+        },
+        {
+          "doc_id": "34982259",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9993461966514587
+        },
+        {
+          "doc_id": "22973574",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9874230623245239
+        },
+        {
+          "doc_id": "22973574",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9959834814071655
+        },
+        {
+          "doc_id": "22973574",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9995694756507874
+        },
+        {
+          "doc_id": "22973574",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9998310804367065
+        },
+        {
+          "doc_id": "22973574",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9995694756507874
+        },
+        {
+          "doc_id": "2547636",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9999481439590454
+        },
+        {
+          "doc_id": "2547636",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.999954104423523
+        },
+        {
+          "doc_id": "2547636",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9999433755874634
+        },
+        {
+          "doc_id": "2547636",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9998846054077148
+        },
+        {
+          "doc_id": "2547636",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9999253749847412
+        },
+        {
+          "doc_id": "15728433",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9999442100524902
+        },
+        {
+          "doc_id": "15728433",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.8128756880760193
+        },
+        {
+          "doc_id": "15728433",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9990087747573853
+        },
+        {
+          "doc_id": "15728433",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9994338154792786
+        },
+        {
+          "doc_id": "15728433",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9998114705085754
+        },
+        {
+          "doc_id": "15728433",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9994671940803528
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9995511174201965
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.9993007183074951
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9998654127120972
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9998891353607178
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.999437153339386
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9998819828033447
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 7,
+          "label": "CONTRADICTION",
+          "score": 0.9997561573982239
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 8,
+          "label": "CONTRADICTION",
+          "score": 0.9983726143836975
+        },
+        {
+          "doc_id": "22186938",
+          "sentence_id": 9,
+          "label": "CONTRADICTION",
+          "score": 0.9999217987060547
+        },
+        {
+          "doc_id": "2701077",
+          "sentence_id": 0,
+          "label": "CONTRADICTION",
+          "score": 0.9694479703903198
+        },
+        {
+          "doc_id": "2701077",
+          "sentence_id": 1,
+          "label": "CONTRADICTION",
+          "score": 0.9983633160591125
+        },
+        {
+          "doc_id": "2701077",
+          "sentence_id": 2,
+          "label": "CONTRADICTION",
+          "score": 0.999576985836029
+        },
+        {
+          "doc_id": "2701077",
+          "sentence_id": 3,
+          "label": "CONTRADICTION",
+          "score": 0.9974160194396973
+        },
+        {
+          "doc_id": "2701077",
+          "sentence_id": 4,
+          "label": "CONTRADICTION",
+          "score": 0.9988001585006714
+        },
+        {
+          "doc_id": "2701077",
+          "sentence_id": 5,
+          "label": "CONTRADICTION",
+          "score": 0.9984739422798157
+        },
+        {
+          "doc_id": "2701077",
+          "sentence_id": 6,
+          "label": "CONTRADICTION",
+          "score": 0.9916025996208191
+        }
+      ]
+    }
+  ]
+}

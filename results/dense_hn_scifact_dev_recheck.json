@@ -1,0 +1,32 @@
+{
+  "experiment": "dense_scifact",
+  "status": "measured",
+  "checkpoint": "checkpoints\\scifact-minilm-hn",
+  "model_name_or_path": null,
+  "metrics": {
+    "evaluated_queries": 300,
+    "total_queries": 300,
+    "ks": [
+      1,
+      5,
+      10,
+      20,
+      100
+    ],
+    "recall@1": 0.5656666666666668,
+    "mrr@1": 0.59,
+    "ndcg@1": 0.59,
+    "recall@5": 0.7737777777777779,
+    "mrr@5": 0.6658888888888889,
+    "ndcg@5": 0.6866162935129496,
+    "recall@10": 0.814,
+    "mrr@10": 0.6710304232804232,
+    "ndcg@10": 0.7015265243600305,
+    "recall@20": 0.8623333333333333,
+    "mrr@20": 0.673979578700167,
+    "ndcg@20": 0.7139927748856405,
+    "recall@100": 0.9416666666666667,
+    "mrr@100": 0.6757929687547535,
+    "ndcg@100": 0.7293250205275791
+  }
+}

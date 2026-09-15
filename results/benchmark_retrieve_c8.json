@@ -1,0 +1,14 @@
+{
+  "scope": "local FastAPI + Qdrant local mode; endpoint=/v1/retrieve",
+  "requests": 100,
+  "concurrency": 8,
+  "warmup": 10,
+  "success_rate": 1.0,
+  "qps": 59.166783767537446,
+  "latency_ms": {
+    "mean": 131.590695999912,
+    "p50": 131.57969998428598,
+    "p95": 162.79969998868182,
+    "p99": 175.7791999843903
+  }
+}

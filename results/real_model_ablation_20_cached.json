@@ -1,0 +1,69 @@
+{
+  "models": {
+    "colbert_v2": {
+      "evaluated_queries": 20,
+      "total_queries": 20,
+      "ks": [
+        1,
+        5,
+        10,
+        20,
+        100
+      ],
+      "recall@1": 0.575,
+      "mrr@1": 0.6,
+      "ndcg@1": 0.6,
+      "recall@5": 0.775,
+      "mrr@5": 0.6699999999999999,
+      "ndcg@5": 0.6824356157188729,
+      "recall@10": 0.85,
+      "mrr@10": 0.6818055555555554,
+      "ndcg@10": 0.7071584356829355,
+      "recall@20": 0.875,
+      "mrr@20": 0.6818055555555554,
+      "ndcg@20": 0.7141382043761729,
+      "recall@100": 0.875,
+      "mrr@100": 0.6818055555555554,
+      "ndcg@100": 0.7141382043761729,
+      "latency_seconds": 89.51270409999415,
+      "model_path": "..\\..\\models\\colbert-ir__colbertv2.0",
+      "projection_dim": 128,
+      "scoring": "max_q_token_to_doc_token_then_sum_q_tokens"
+    },
+    "splade_v2": {
+      "evaluated_queries": 20,
+      "total_queries": 20,
+      "ks": [
+        1,
+        5,
+        10,
+        20,
+        100
+      ],
+      "recall@1": 0.525,
+      "mrr@1": 0.55,
+      "ndcg@1": 0.55,
+      "recall@5": 0.725,
+      "mrr@5": 0.635,
+      "ndcg@5": 0.6446394630357186,
+      "recall@10": 0.85,
+      "mrr@10": 0.6554761904761905,
+      "ndcg@10": 0.6871221835864385,
+      "recall@20": 0.875,
+      "mrr@20": 0.6554761904761905,
+      "ndcg@20": 0.694969180805335,
+      "recall@100": 0.875,
+      "mrr@100": 0.6554761904761905,
+      "ndcg@100": 0.694969180805335,
+      "latency_seconds": 76.1108368000132,
+      "model_path": "..\\..\\models\\naver__splade_v2_max"
+    }
+  },
+  "queries": 20,
+  "candidate_depth": 20,
+  "protocol": {
+    "gold_evidence_used_for_input": false,
+    "test_used": false,
+    "candidate_source": "BM25 train-independent Dev retrieval"
+  }
+}

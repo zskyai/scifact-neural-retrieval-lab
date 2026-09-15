@@ -1,8 +1,8 @@
 {
   "experiment": "bm25_scifact",
   "status": "measured",
-  "corpus_path": "data/scifact/corpus.jsonl",
-  "claims_path": "data/scifact/claims_dev.jsonl",
+  "corpus_path": "data\\scifact\\corpus.jsonl",
+  "claims_path": "data\\scifact\\claims_dev.jsonl",
   "corpus_documents": 5183,
   "queries": 300,
   "bm25": {
@@ -12,9 +12,9 @@
     "tokenizer": "lowercase_alphanumeric_regex"
   },
   "timing_seconds": {
-    "index": 0.39235730000655167,
-    "search": 1.6037455000041518,
-    "search_per_query": 0.005345818333347172
+    "index": 0.626703699992504,
+    "search": 1.7509039000142366,
+    "search_per_query": 0.005836346333380788
   },
   "metrics": {
     "evaluated_queries": 300,

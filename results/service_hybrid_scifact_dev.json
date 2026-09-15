@@ -1,0 +1,23 @@
+{
+  "scope": "FastAPI service-side hybrid retrieval on official SciFact dev",
+  "queries": 300,
+  "top_k": 10,
+  "metrics": {
+    "evaluated_queries": 300,
+    "total_queries": 300,
+    "ks": [
+      1,
+      5,
+      10
+    ],
+    "recall@1": 0.5312222222222223,
+    "mrr@1": 0.55,
+    "ndcg@1": 0.55,
+    "recall@5": 0.7589444444444444,
+    "mrr@5": 0.6448333333333336,
+    "ndcg@5": 0.6696584734592016,
+    "recall@10": 0.841,
+    "mrr@10": 0.6554193121693124,
+    "ndcg@10": 0.6982944871006929
+  }
+}

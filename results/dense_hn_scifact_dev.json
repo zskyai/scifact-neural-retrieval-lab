@@ -1,0 +1,32 @@
+{
+  "experiment": "dense_scifact",
+  "status": "measured",
+  "checkpoint": "repos/scifact-neural-retrieval-lab/checkpoints/scifact-minilm-hn",
+  "model_name_or_path": null,
+  "metrics": {
+    "evaluated_queries": 300,
+    "total_queries": 300,
+    "ks": [
+      1,
+      5,
+      10,
+      20,
+      100
+    ],
+    "recall@1": 0.5305555555555556,
+    "mrr@1": 0.5466666666666666,
+    "ndcg@1": 0.5466666666666666,
+    "recall@5": 0.7392777777777778,
+    "mrr@5": 0.6306666666666666,
+    "ndcg@5": 0.6530346614045459,
+    "recall@10": 0.8032222222222223,
+    "mrr@10": 0.6386071428571427,
+    "ndcg@10": 0.6754457355046161,
+    "recall@20": 0.8605555555555554,
+    "mrr@20": 0.6427923072942423,
+    "ndcg@20": 0.6907946488791278,
+    "recall@100": 0.935,
+    "mrr@100": 0.64443504499351,
+    "ndcg@100": 0.7055039446891843
+  }
+}

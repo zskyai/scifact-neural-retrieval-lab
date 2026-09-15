@@ -1,0 +1,59 @@
+{
+  "corpus_abstracts": 5183,
+  "splits": {
+    "train": 809,
+    "dev": 300,
+    "test": 300
+  },
+  "label_distribution": {
+    "CONTRADICT": 463,
+    "SUPPORT": 832
+  },
+  "evidence_sentence_annotations": 1295,
+  "evidence_documents_per_claim": {
+    "0": 716,
+    "1": 646,
+    "2": 24,
+    "3": 14,
+    "4": 8,
+    "5": 1
+  },
+  "duplicate_claim_ids": {
+    "dev_train": 0,
+    "dev_test": 0,
+    "test_train": 0
+  },
+  "duplicate_claim_text": {
+    "dev_train": 2,
+    "dev_test": 0,
+    "test_train": 1
+  },
+  "near_duplicate_claims": {
+    "train": [
+      {
+        "a": "85",
+        "b": "86"
+      },
+      {
+        "a": "89",
+        "b": "90"
+      }
+    ],
+    "dev": [],
+    "test": [
+      {
+        "a": "510",
+        "b": "511"
+      },
+      {
+        "a": "868",
+        "b": "869"
+      },
+      {
+        "a": "874",
+        "b": "875"
+      }
+    ]
+  },
+  "test_used_for_training": false
+}

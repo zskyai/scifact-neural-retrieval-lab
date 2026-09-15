@@ -1,0 +1,6 @@
+{
+  "documents": 5183,
+  "dimension": 384,
+  "collection": "scifact_evidence",
+  "qdrant_path": "results\\qdrant_local"
+}
