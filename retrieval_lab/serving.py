@@ -23,6 +23,8 @@ from transformers import AutoModel, AutoModelForSequenceClassification, AutoToke
 from .bm25 import BM25Config, BM25Index
 from .data import Document, load_corpus
 from .evidence import select_evidence_sentences
+from .adaptive_routing import AdaptiveEvidenceRouter, RetrievalSignals
+from .query_planning import ScientificQueryPlanner
 
 
 class EmbedRequest(BaseModel):
@@ -43,6 +45,19 @@ class RerankRequest(BaseModel):
 class RagRequest(BaseModel):
     query: str = Field(min_length=1, max_length=2048)
     top_k: int = Field(default=5, ge=1, le=20)
+
+
+class PlanRequest(BaseModel):
+    query: str = Field(min_length=1, max_length=2048)
+
+
+class RouteRequest(BaseModel):
+    top1_score: float
+    top1_margin: float
+    evidence_coverage: float = Field(ge=0.0, le=1.0)
+    support_score: float = Field(ge=0.0, le=1.0)
+    contradiction_score: float = Field(ge=0.0, le=1.0)
+    retry_budget: int = Field(default=1, ge=0, le=3)
 
 
 @dataclass(frozen=True)
@@ -129,6 +144,8 @@ class LocalRAG:
         self.bm25 = BM25Index(self.documents, BM25Config(k1=1.5, b=0.75, title_boost=2))
         self.embedder = MeanPoolEmbedder(embedding_model, device=device)
         self.reranker = CrossEncoderScorer(rerank_model, device=device)
+        self.query_planner = ScientificQueryPlanner()
+        self.router = AdaptiveEvidenceRouter()
         self.client = QdrantClient(url=qdrant_url) if qdrant_url else QdrantClient(path=str(qdrant_path))
         self.collection = collection
         info = self.client.get_collection(collection)
@@ -228,6 +245,31 @@ def build_app(rag: LocalRAG) -> FastAPI:
         started = time.perf_counter()
         vectors = rag.embed(request.texts)
         return {"model": rag.embedder.model.name_or_path, "dimension": int(vectors.shape[1]), "vectors": vectors.tolist(), "latency_ms": (time.perf_counter() - started) * 1000.0}
+
+    @app.post("/v1/plan")
+    def plan(request: PlanRequest) -> dict[str, Any]:
+        query_plan = rag.query_planner.plan(request.query)
+        return {
+            "original": query_plan.original,
+            "rewrites": list(query_plan.rewrites),
+            "subqueries": list(query_plan.subqueries),
+            "all_queries": list(query_plan.all_queries),
+            "strategy": query_plan.strategy,
+        }
+
+    @app.post("/v1/route")
+    def route(request: RouteRequest) -> dict[str, Any]:
+        decision = rag.router.decide(
+            RetrievalSignals(
+                request.top1_score,
+                request.top1_margin,
+                request.evidence_coverage,
+                request.support_score,
+                request.contradiction_score,
+            ),
+            retry_budget=request.retry_budget,
+        )
+        return {"action": decision.action, "confidence": decision.confidence, "reasons": list(decision.reasons), "retry_budget": decision.retry_budget}
 
     @app.post("/v1/retrieve")
     def retrieve(request: RetrieveRequest) -> dict[str, Any]:

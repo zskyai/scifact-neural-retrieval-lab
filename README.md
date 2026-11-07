@@ -15,6 +15,8 @@
 - 自定义 query-positive-negative InfoNCE，支持 hard negatives、in-batch negatives 和 negative mask。
 - 双塔训练 CLI、dense retrieval CLI，以及 Cross-Encoder rerank 接口和 CLI。
 - FastAPI 服务化链路：MiniLM Embedding、Qdrant local-mode 向量索引、BM25 + Dense RRF 混合召回、Cross-Encoder Rerank 和返回 Top-3 证据句的抽取式 RAG 接口。
+- 可审计 query planning：保留原 claim 的 deterministic rewrite/decomposition、加权 RRF 融合和 query-plan run 对比。
+- Adaptive evidence routing：根据 top-1/margin、证据覆盖、支持/冲突分数选择 answer、retry 或 abstain，所有阈值显式配置并可在 validation 上校准。
 - 固定请求数和并发的 HTTP benchmark，记录 QPS、P50/P95/P99、成功率及分阶段耗时。
 - 使用 SciFact 官方句级标注评测引用文献命中、证据文献命中和返回片段的证据句命中。
 
@@ -39,7 +41,7 @@ python scripts/serve_rag.py \
   --qdrant-path results/qdrant_local
 ```
 
-接口包括 `GET /healthz`、`POST /v1/embed`、`POST /v1/retrieve`、`POST /v1/rerank` 和 `POST /v1/rag`。Docker Compose 同时提供 Qdrant 服务模式配置；本次可复现实验使用 local mode，避免把未运行的多容器部署写成线上经验。
+接口包括 `GET /healthz`、`POST /v1/embed`、`POST /v1/plan`、`POST /v1/route`、`POST /v1/retrieve`、`POST /v1/rerank` 和 `POST /v1/rag`。其中 `/v1/plan` 返回原 claim、rewrite、subquery 和完整 provenance，`/v1/route` 返回 adaptive retry/abstain 的特征与原因。Docker Compose 同时提供 Qdrant 服务模式配置；本次可复现实验使用 local mode，避免把未运行的多容器部署写成线上经验。
 
 需要运行服务模式时，先启动 Qdrant，再通过 HTTP upsert 索引，最后启动 API：
 
