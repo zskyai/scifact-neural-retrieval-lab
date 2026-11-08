@@ -10,7 +10,7 @@ class SentenceNLI:
             self.pipe=pipeline('text-classification',model=str(model_path),tokenizer=str(model_path),local_files_only=True)
     def predict(self, claim, sentences):
         if self.pipe:
-            return self.pipe([{'text':s,'text_pair':claim} for s in sentences],truncation=True)
+            return self.pipe([{'text':s,'text_pair':claim} for s in sentences],truncation=True,max_length=512,batch_size=8)
         q=set(re.findall(r'[a-z0-9]+',claim.lower())); out=[]
         neg={'no','not','never','lack','without','fails','failed'}
         for s in sentences:

@@ -55,7 +55,7 @@ class AdaptiveEvidenceRouter:
         if retry_budget < 0:
             raise ValueError("retry_budget must be non-negative")
         reasons: list[str] = []
-        if signals.contradiction_score > self.max_contradiction:
+        if signals.contradiction_score > self.max_contradiction and signals.support_score >= self.min_support:
             reasons.append("conflicting_evidence")
         if signals.top1_score < self.min_top1:
             reasons.append("weak_top1")
@@ -63,12 +63,18 @@ class AdaptiveEvidenceRouter:
             reasons.append("ambiguous_rank_margin")
         if signals.evidence_coverage < self.min_coverage:
             reasons.append("low_evidence_coverage")
-        if signals.support_score < self.min_support:
+        if max(signals.support_score, signals.contradiction_score) < self.min_support:
             reasons.append("weak_entailment")
         confidence = self._confidence(signals)
         if not reasons and confidence >= self.abstain_confidence:
             return RoutingDecision("answer", confidence, (), 0)
-        retry_reasons = {"weak_top1", "ambiguous_rank_margin", "low_evidence_coverage", "weak_entailment"}
+        retry_reasons = {
+            "conflicting_evidence",
+            "weak_top1",
+            "ambiguous_rank_margin",
+            "low_evidence_coverage",
+            "weak_entailment",
+        }
         if retry_budget and any(reason in retry_reasons for reason in reasons):
             return RoutingDecision("retry", confidence, tuple(reasons), retry_budget)
         return RoutingDecision("abstain", confidence, tuple(reasons), 0)
@@ -77,8 +83,8 @@ class AdaptiveEvidenceRouter:
         rank = max(0.0, min(1.0, signals.top1_score))
         margin = max(0.0, min(1.0, signals.top1_margin / max(self.min_margin * 4, 1e-6)))
         evidence = max(0.0, min(1.0, signals.evidence_coverage))
-        support = max(0.0, min(1.0, signals.support_score))
-        contradiction_penalty = max(0.0, min(1.0, signals.contradiction_score))
+        support = max(0.0, min(1.0, max(signals.support_score, signals.contradiction_score)))
+        contradiction_penalty = max(0.0, min(1.0, min(signals.support_score, signals.contradiction_score)))
         return max(0.0, min(1.0, 0.20 * rank + 0.20 * margin + 0.25 * evidence + 0.40 * support - 0.25 * contradiction_penalty))
 
 

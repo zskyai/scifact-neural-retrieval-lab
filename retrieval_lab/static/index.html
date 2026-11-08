@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence Review Desk</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, "Segoe UI", sans-serif; color: #1d2939; background: #f5f7f8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: #fff; border-bottom: 1px solid #dce2e7; }
+    h1 { margin: 0; font-size: 19px; font-weight: 650; }
+    header span { color: #667085; font-size: 13px; }
+    main { display: grid; grid-template-columns: minmax(320px, 0.9fr) minmax(480px, 1.5fr); gap: 22px; max-width: 1440px; padding: 24px; margin: auto; }
+    section { min-width: 0; }
+    h2 { margin: 0 0 14px; font-size: 15px; }
+    .form { background: #fff; border: 1px solid #dce2e7; border-radius: 6px; padding: 16px; }
+    textarea, input, select { width: 100%; border: 1px solid #cbd3da; border-radius: 4px; padding: 10px; font: inherit; background: #fff; }
+    textarea { min-height: 112px; resize: vertical; }
+    label { display: block; margin: 12px 0 6px; color: #475467; font-size: 12px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    button { min-height: 38px; border: 1px solid #155eef; border-radius: 4px; padding: 8px 12px; color: #fff; background: #155eef; font: inherit; font-size: 13px; cursor: pointer; }
+    button.secondary { border-color: #cbd3da; background: #fff; color: #344054; }
+    button:disabled { cursor: wait; opacity: .65; }
+    .actions { display: flex; gap: 8px; margin-top: 14px; }
+    .queue { margin-top: 20px; }
+    .case { display: block; width: 100%; margin-bottom: 7px; padding: 10px; border: 1px solid #dce2e7; border-radius: 4px; color: #344054; background: #fff; text-align: left; overflow-wrap: anywhere; }
+    .case.active { border-color: #155eef; }
+    .muted { color: #667085; font-size: 12px; }
+    .result { min-height: 220px; }
+    .verdict { display: flex; align-items: center; gap: 10px; margin: 0 0 12px; font-size: 20px; font-weight: 650; }
+    .pill { border-radius: 3px; padding: 4px 7px; font-size: 11px; font-weight: 600; background: #eef4ff; color: #1849a9; }
+    .claim { padding: 12px; background: #f8fafb; border-left: 3px solid #1570ef; overflow-wrap: anywhere; }
+    .evidence { border-top: 1px solid #e4e7ec; padding: 12px 0; }
+    .evidence strong { display: block; font-size: 13px; }
+    .evidence p { margin: 7px 0 0; color: #475467; font-size: 13px; line-height: 1.5; }
+    details { margin-top: 12px; font-size: 12px; color: #475467; }
+    pre { overflow: auto; white-space: pre-wrap; }
+    .review { margin-top: 18px; border-top: 1px solid #dce2e7; padding-top: 14px; }
+    .status { min-height: 18px; margin-top: 8px; color: #b42318; font-size: 12px; }
+    @media (max-width: 800px) { main { grid-template-columns: 1fr; padding: 14px; } header { padding: 14px; } }
+  </style>
+</head>
+<body>
+  <header><h1>Evidence Review Desk</h1><span id="health">Connecting to SciFact corpus…</span></header>
+  <main>
+    <section>
+      <h2>New claim review</h2>
+      <div class="form">
+        <label for="claim">Scientific claim</label>
+        <textarea id="claim" maxlength="2048" placeholder="Enter a claim to check against the SciFact corpus"></textarea>
+        <div class="row">
+          <div><label for="topk">Candidate documents</label><input id="topk" type="number" min="1" max="50" value="10"></div>
+          <div><label for="retries">Evidence retry budget</label><input id="retries" type="number" min="0" max="3" value="1"></div>
+        </div>
+        <div class="actions"><button id="submit">Verify claim</button><button class="secondary" id="refresh">Refresh cases</button></div>
+        <div class="status" id="message" role="status"></div>
+      </div>
+      <div class="queue"><h2>Review queue <span class="muted" id="count"></span></h2><div id="cases"></div></div>
+    </section>
+    <section>
+      <h2>Evidence and decision</h2>
+      <div class="form result" id="result"><span class="muted">Select a saved case or submit a claim.</span></div>
+    </section>
+  </main>
+<script>
+const $ = (id) => document.getElementById(id);
+let activeCase = null;
+let casePage = 0;
+async function api(path, options = {}) {
+  const response = await fetch(path, { headers: { "Content-Type": "application/json" }, ...options });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.detail || response.statusText);
+  return data;
+}
+function esc(value) { return String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" })[char]); }
+async function loadCases() {
+  const rows = await api('/v1/cases?limit=50&offset=' + (casePage * 50));
+  $("count").textContent = `${rows.length} saved`;
+  $("cases").innerHTML = rows.map((item) => `<button class="case ${item.case_id === activeCase ? "active" : ""}" data-id="${esc(item.case_id)}"><strong>${esc(item.result.label)}</strong> · ${esc(item.status)}<br><span class="muted">${esc(item.claim)}</span></button>`).join("") || '<span class="muted">No claim reviews yet.</span>';
+  document.querySelectorAll(".case").forEach((button) => button.addEventListener("click", () => openCase(button.dataset.id)));
+  $("cases").insertAdjacentHTML("beforeend", '<div class="actions"><button class="secondary" id="previousCases">Previous</button><button class="secondary" id="nextCases">Next</button></div>');
+  $("previousCases").disabled = casePage === 0; $("nextCases").disabled = rows.length < 50;
+  $("previousCases").onclick = () => { casePage--; loadCases().catch(e => $("message").textContent = e.message); };
+  $("nextCases").onclick = () => { casePage++; loadCases().catch(e => $("message").textContent = e.message); };
+}
+function renderCase(item) {
+  activeCase = item.case_id;
+  const result = item.result;
+  const evidence = (result.evidence || []).flatMap((doc) => (doc.sentences || []).map((sentence) => `<article class="evidence"><strong>${esc(doc.title)} · ${esc(doc.doc_id)} · sentence ${esc(sentence.sentence_id)}</strong><p>${esc(sentence.text)}</p><div class="muted">NLI: ${esc(sentence.nli?.label || 'unavailable')} · ${Number(sentence.nli?.score || 0).toFixed(3)}</div><button class="secondary" data-document="${esc(doc.doc_id)}">Open full abstract</button><pre hidden></pre></article>`)).join("");
+  $("result").innerHTML = `<div class="verdict">${esc(result.label)} <span class="pill">${esc(result.action)}</span></div><div class="muted">Case ${esc(item.case_id)} · ${esc(item.status)} · confidence ${Number(result.confidence || 0).toFixed(2)}</div><p class="claim">${esc(item.claim)}</p><h3>Retrieved evidence</h3>${evidence || '<p class="muted">No supporting sentence was returned.</p>'}<details><summary>Retrieval and verification trace</summary><pre>${esc(JSON.stringify(result.trace || [], null, 2))}</pre></details><div class="review"><h3>Reviewer decision</h3><div class="row"><div><label for="reviewer">Reviewer</label><input id="reviewer" value="researcher"></div><div><label for="verdict">Verified label</label><select id="verdict"><option>SUPPORTS</option><option>CONTRADICTS</option><option>NEI</option></select></div></div><label for="note">Review note</label><input id="note" maxlength="1000" placeholder="Reason for correction or confirmation"><button id="saveReview" style="margin-top:10px">Save review</button><div class="muted">${(item.reviews || []).length} prior reviews</div></div>`;
+  $("saveReview").addEventListener("click", saveReview);
+  $("result").insertBefore($("result").querySelector(".review"), $("result").querySelector("h3"));
+  if (result.review_context) $("result").insertAdjacentHTML("afterbegin", '<p class="muted">Evaluation review · ' + esc(result.review_context.split) + ' · ' + esc((result.review_context.errors || []).join(', ')) + '</p>');
+  document.querySelectorAll("[data-document]").forEach(button => button.addEventListener("click", async () => {
+    try { const source = await api(`/v1/documents/${encodeURIComponent(button.dataset.document)}`); button.nextElementSibling.hidden = false; button.nextElementSibling.style.whiteSpace = "pre-wrap"; button.nextElementSibling.textContent = source.sentences.map(s => `[${s.sentence_id}] ${s.text}`).join("\n"); } catch(error) { $("message").textContent = error.message; }
+  }));
+  $("verdict").value = item.reviews?.at(-1)?.verdict || result.label || "NEI";
+  $("result").insertAdjacentHTML("beforeend", `<p><a href="/v1/cases/${encodeURIComponent(item.case_id)}/report">Download evidence report</a></p><details><summary>Model provenance, source decisions and review history</summary><pre>${esc(JSON.stringify({citations: result.citations, evidence: result.evidence, provenance: result.provenance, timings_ms: result.timings_ms, reviews: item.reviews}, null, 2))}</pre></details>`);
+  loadCases();
+}
+async function openCase(id) { try { renderCase(await api(`/v1/cases/${encodeURIComponent(id)}`)); } catch (error) { $("message").textContent = error.message; } }
+async function saveReview() {
+  try {
+    const item = await api(`/v1/cases/${encodeURIComponent(activeCase)}/reviews`, { method: "POST", body: JSON.stringify({ reviewer: $("reviewer").value, verdict: $("verdict").value, note: $("note").value }) });
+    renderCase(item);
+    $("message").textContent = "Review saved.";
+  } catch (error) { $("message").textContent = error.message; }
+}
+$("submit").addEventListener("click", async () => {
+  const button = $("submit"); button.disabled = true; $("message").textContent = "Retrieving and checking evidence…";
+  try {
+    const item = await api("/v1/cases", { method: "POST", body: JSON.stringify({ claim: $("claim").value, top_k: Number($("topk").value), max_retries: Number($("retries").value) }) });
+    renderCase(item); $("message").textContent = "Case saved.";
+  } catch (error) { $("message").textContent = error.message; }
+  finally { button.disabled = false; }
+});
+$("refresh").addEventListener("click", loadCases);
+api("/healthz").then((data) => {
+  $("health").textContent = `${data.corpus_documents.toLocaleString()} abstracts · ${data.verification_mode || data.collection}`;
+  if (data.verification_mode === 'domain_bm25') {
+    $("topk").value = data.verification_config.top_k; $("topk").disabled = true;
+    $("retries").value = 0; $("retries").disabled = true;
+  }
+}).catch(() => $("health").textContent = "Service unavailable");
+loadCases().catch((error) => $("message").textContent = error.message);
+</script>
+</body>
+</html>

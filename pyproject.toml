@@ -30,6 +30,9 @@ scifact-retrieval = "retrieval_lab.cli:main"
 [tool.setuptools.packages.find]
 include = ["retrieval_lab*"]
 
+[tool.setuptools.package-data]
+retrieval_lab = ["static/*.html"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"

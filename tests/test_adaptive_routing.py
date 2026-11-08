@@ -4,6 +4,13 @@ from retrieval_lab.adaptive_routing import AdaptiveEvidenceRouter, RetrievalSign
 
 
 class AdaptiveRoutingTests(unittest.TestCase):
+    def test_strong_refutation_is_decisive_evidence_not_conflict(self):
+        decision = AdaptiveEvidenceRouter().decide(
+            RetrievalSignals(0.8, 0.2, 0.9, 0.01, 0.95), retry_budget=0
+        )
+        self.assertEqual(decision.action, "answer")
+        self.assertNotIn("conflicting_evidence", decision.reasons)
+
     def test_good_evidence_answers_without_retry(self):
         decision = AdaptiveEvidenceRouter().decide(
             RetrievalSignals(0.8, 0.2, 0.9, 0.9, 0.0), retry_budget=1

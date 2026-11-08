@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "split": "official_dev",
+  "claims": 300,
+  "corpus_documents": 5183,
+  "candidate_top_k": 20,
+  "max_length": 1024,
+  "sentence_overlap": 1,
+  "candidate_docs": 6017,
+  "sentence_windows": 6032,
+  "gold_docs_added_outside_bm25_top_k": 17,
+  "max_window_tokens": 1019,
+  "claims_sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217",
+  "corpus_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+  "test_used": false,
+  "training_used": false,
+  "threshold_selection": "none",
+  "feature_definition": "complete abstract sentence windows with gold rationale alignment"
+}

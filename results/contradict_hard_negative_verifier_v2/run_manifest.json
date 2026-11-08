@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "stage": "contradict_hard_negative_verifier",
+  "official_train_claims": 809,
+  "train_claims": 676,
+  "calibration_claims": 133,
+  "epochs_completed": 2,
+  "selected_epoch": 1,
+  "selection": "calibration_pair_macro_f1",
+  "best_calibration_macro_f1": 0.6449460146762497,
+  "best_contradicts_f1": 0.5436893203883495,
+  "contradict_hard_negative_top_k": 50,
+  "contradict_weight": 2.0,
+  "hard_negative_examples": 4056,
+  "test_used": false,
+  "dev_used": false,
+  "source_sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f",
+  "note": "Stopped after epoch 2 because calibration macro-F1 decreased; best epoch-1 HF checkpoint retained."
+}
